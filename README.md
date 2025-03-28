@@ -8,6 +8,7 @@
 ## Autores
 
 - [@estudiante](https://github.com/MauricioAtoy)
+- ## Javier Mauricio Llanos Atoy
 
 ## Descripción del Proyecto
 

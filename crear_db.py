@@ -5,12 +5,21 @@ import sqlite3
 conexion = sqlite3.connect('web2.sqlite3')
 cursor = conexion.cursor() 
 # eliminar la tabla
+cursor.execute("""
+DROP TABLE IF EXISTS productos;
+""")
 
 # crear la tabla
 cursor.execute("""
-
+CREATE TABLE IF NOT EXISTS productos (
+  id INTEGER PRIMARY KEY,
+  categoria TEXT NOT NULL,
+  marca TEXT NOT NULL,
+  nombre TEXT NOT NULL,
+  descripcion TEXT NOT NULL,
+  precio REAL NOT NULL
+  );
 """)
-
 # insertar los datos iniciales
 datos = [
   (101, 'Celular', 'Apple', 'iPhone 15', '128GB+6GB RAM, Pantalla 6.1p, Chip A16 Bionic, cable Tipo C, Cámara 48MP', 4599900),
@@ -25,7 +34,7 @@ datos = [
 ]
 
 cursor.executemany("""
-
+INSERT INTO productos VALUES (?, ?, ?, ?, ?, ?);
 """, datos)
 
 # grabar
