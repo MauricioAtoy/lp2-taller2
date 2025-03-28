@@ -7,7 +7,7 @@
 
 ## Autores
 
-- [@estudiante](https://www.github.com/estudiante)
+- [@estudiante](https://github.com/MauricioAtoy)
 
 ## Descripción del Proyecto
 

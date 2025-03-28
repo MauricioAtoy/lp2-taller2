@@ -2,7 +2,8 @@
 import sqlite3
 
 # establecer la conexion
-
+conexion = sqlite3.connect('web2.sqlite3')
+cursor = conexion.cursor() 
 # eliminar la tabla
 
 # crear la tabla
