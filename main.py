@@ -6,11 +6,10 @@ from pprint import pprint
 conexion = sqlite3.connect('web2.sqlite3')
 conexion.row_factory = sqlite3.Row #modo diccionario
 cursor = conexion.cursor()
-cursor.execute(""""
+cursor.execute("""
 SELECT * FROM productos;
 """)
 productos = [ dict(producto) for producto in cursor.fetchall()]
-print(productos)
 cursor.close()
 conexion.close()
 
