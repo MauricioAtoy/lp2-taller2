@@ -24,7 +24,7 @@ def ruta_raiz():
 @app.route('/producto/<int:pid>')
 def ruta_producto(pid):
   for producto in productos:
-    if pid == producto.id:
+    if pid == producto["id"]:
       return render_template('producto.html', producto=producto)
   return redirect('/')
 
